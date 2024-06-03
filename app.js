@@ -2,7 +2,9 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const port = 8080;
-app.get('/', (req, res) => res.send(' this is CSS 314 cloud computing DEVOPS ; CI-CD PIPELINE. THIS PAGE INDICATES SUCCESS  !'));
+app.use(express.static("AWS"));
+
+// app.get('/', (req, res) => res.send(' this is CSS 314 cloud computing DEVOPS ; CI-CD PIPELINE. THIS PAGE INDICATES SUCCESS  !'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
