@@ -3,39 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NACOS - Home</title>
+    <title>Login - NACOS</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>NACOS</h1>
         <hr>
-        <h2>Payment of Dues</h2>
-        <p>The amount to be paid is <strong>₦3,500</strong></p>
-        <button type="button" onclick="alert('Payment functionality not implemented')">Pay Now</button>
-        <section>
-            <h3>Paid Members</h3>
-            <ul id="paidMembersList">
-                <!-- List of paid members will go here -->
-            </ul>
-        </section>
-        <footer>
-            <p>Contact: nacos@example.com</p>
-        </footer>
+        <h2>Login</h2>
+        <form action="index.html">
+            <label for="matricNumber">Matric Number:</label>
+            <input type="text" id="matricNumber" name="matricNumber" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="register.html">Register here</a></p>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Example: Adding members who have paid
-            const paidMembersList = document.getElementById('paidMembersList');
-            const paidMembers = ['John Doe', 'Jane Smith', 'Michael Johnson']; // Example data
-            
-            paidMembers.forEach(member => {
-                const li = document.createElement('li');
-                li.textContent = member;
-                paidMembersList.appendChild(li);
-            });
-        });
-    </script>
-    
 </body>
 </html>
